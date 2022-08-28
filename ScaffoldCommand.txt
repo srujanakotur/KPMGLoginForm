@@ -1,0 +1,3 @@
+﻿Scaffold-DbContext 'Data Source=LAPTOP-QESC5AOM\SQLEXPRESS;Initial Catalog=DbLogin;Trusted_Connection=True;' Microsoft.EntityFrameworkCore.SqlServer -Context LoginContext -OutputDir Entities -DataAnnotations -force
+
+Scaffold-DbContext 'Data Source=LAPTOP-QESC5AOM\SQLEXPRESS;Initial Catalog=DbLogin;Trusted_Connection=True;' Microsoft.EntityFrameworkCore.SqlServer -Context LoginContext -OutputDir Models -DataAnnotations -force
