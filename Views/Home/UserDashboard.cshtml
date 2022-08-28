@@ -1,14 +1,17 @@
 ﻿@{
     ViewBag.Title = "UserDashboard";
 }
-
-@if(ViewBag.Username != null)
-{
-    <p style="font-size:40px;">Welcome @ViewBag.Username</p>
-}
 <br />
-<form asp-action="Login">
-    <div class="form-group">
-        <input type="submit" value="Logout" class="btn btn-primary" />
-    </div>
-</form>
+<br />
+<div class="container jumbotron bg-light" style="width:35%">
+    <form asp-action="Login">
+        <div class="card-header-pills bg-dark text-white">
+            <h2 style="text-align:center">Welcome @ViewBag.Username</h2>
+        </div>
+        <br />
+        <br />
+        <div class="form-group" style="80%">
+            <input type="submit" value="Logout" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
