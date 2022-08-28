@@ -1,9 +1,10 @@
 ﻿@{
     ViewBag.Title = "UserDashboard";
 }
+
 @if(ViewBag.Username != null)
 {
-    <p><b>Welcome @ViewBag.Username</b></p>
+    <p style="font-size:40px;">Welcome @ViewBag.Username</p>
 }
 <br />
 <form asp-action="Login">

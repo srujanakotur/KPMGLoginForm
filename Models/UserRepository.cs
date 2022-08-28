@@ -15,16 +15,19 @@ namespace KPMGLoginForm.Models
             this.context = _context;
         }
 
+        //Adding User to Db
         public void AddUser(TblUser user)
         {
             context.TblUsers.Add(user);
         }
 
+        //Fetching the User
         public TblUser GetUser(string UserEmail, string Password)
         {
             return context.TblUsers.Where(x => x.UserEmail == UserEmail && x.Password == Password).FirstOrDefault();
         }
 
+        //Remove User from DB
         public void DeleteUser(TblUser user)
         {
             context.TblUsers.Remove(user);

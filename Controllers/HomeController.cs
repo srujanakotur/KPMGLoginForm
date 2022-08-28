@@ -20,16 +20,14 @@ namespace KPMGLoginForm.Controllers
             _userRepository = userRepository;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+        //Initial Login View
         public IActionResult Login()
         {
             return View();
         }
 
+        //Capturing the data and checking if its valid UserEmail and Password
+        //If Success then redirecting to Home/Dashboard page else showing a message that its an invalid User
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Login(TblUser User)
@@ -52,11 +50,13 @@ namespace KPMGLoginForm.Controllers
             return View();
         }
 
+        //Initial Register Screen
         public IActionResult Register()
         {
             return View();
         }
 
+        //Capturing the data and adding it to the Database table and then the User can return to Login page to Login
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Register(TblUser User)
@@ -91,6 +91,7 @@ namespace KPMGLoginForm.Controllers
             return View();
         }
 
+        //Home or Dashboard after successful login
         public IActionResult UserDashboard(TblUser user)
         {
             if(user != null)
